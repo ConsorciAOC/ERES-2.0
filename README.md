@@ -3352,6 +3352,37 @@ Expected response: {
     "usuari": "string"
 }
 ```
+
+|Paràmetres| 	|
+|----------|----|
+|areacodAssumpte	          |Obligatori. Codi àrea de destí	|
+|assumcod	                  |Obligatori. Codi assumpte	|
+|codiTransport	                  |Obligatori. Codi tipus transport 	|
+|codiAreaAssumpte	          |Codi àrea de destí			|
+|contingut	          |Obligatori. Contingut extracte		|
+|depcodAssumpte	                      |Obligatori. Codi de departament destí (unitat de treball) 	|
+|descripcioCurta	              |Descripció observacions transport	|
+|refcodassumpte	                  |Codi assumpte del quadre de classificació. Si no s'indica, s'agafa assumcod		|
+|numeroTransport	                  |Número relacionat amb el mitjà de transport 		|
+|responsable	          |Responsable destinatari, valor "_RESPONSABLE_" (visible en alguns entorns)	|
+|representant.nom	          |Nom del representant. Obligatori si la persona no existeix i es vol crear. 	|
+|representant.cognom1	                      |Primer cognom del representant. Obligatori si la persona no existeix i es vol crear.	|
+|representant.cognom2	              |Segon cognom del representant. Obligatori si la persona no existeix i es vol crear.		|
+|representant.nif	                  |NIF o DNI del representant. Obligatori si la persona no existeix i es vol crear. Si ja existeix, només indicant el NIF ja es recupera la informació de la persona.	|
+|representant.mail	                  |E-mail de la persona representant |
+|representant.telefon	          |Telèfon de la persona representant |
+|representant.crearPersonaSiNoExisteix    |Si no existeix la persona amb el DNI o passaport indicat, la crea. Per defecte false 	|
+|solicitant.nom	                      |Nom de l’interessat principal. Obligatori si la persona no existeix i es vol crear. 	|
+|solicitant.cognom1	               |Primer cognom de l’interessat principal. Obligatori si la persona no existeix i  es vol crear. 	|
+|solicitant.cognom2	              |Segon cognom de l’interessat principal. Obligatori si la persona no existeix i es vol crear.		|
+|solicitant.nif	                  |NIF o DNI de l’interessat principal. Obligatori si la persona no existeix i es vol crear. Si ja existeix, només indicant el NIF ja es recupera la informació de la persona.	|
+|solicitant.mail	                  |E-mail de l’interessat principal 	|
+|solicitant.telefon	          |Telèfon de l’interessat principal 	|
+|solicitant.crearPersonaSiNoExisteix    |Si no existeix la persona amb el DNI o passaport indicat, la crea. Per defecte false 	|
+|tramcod	                      |Codi del tràmit 	|
+|transObs	                      |Observacions transport. Xafa el contingut de descripcioCurta 	|
+|tramcod	                      |Any del registre 	|
+
 ***Exemple:***
 
 ```json
