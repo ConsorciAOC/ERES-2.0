@@ -370,11 +370,11 @@ Expected response body:
 |Paràmetres| |
 |----------|-|
 |codi1	           |Codi de la partícula|
-|codi2	           ||
-|comptador	       ||
+|codi2	           |Codi 2, codi addicional|
+|comptador	       |Valor numèric|
 |descripcio	       |Descripció de la partícula|
-|descripcio2        ||	
-|qual	||
+|descripcio2        |Descripció addicional|	
+|qual	|Qualificador|
 
 
 ***Exemple:***
@@ -658,36 +658,36 @@ Expected response:
 |Paràmetres| |
 |----------|-|
 |ambKm	            |                                                                  |
-|domTip	            |                                                                  |
-|domTLoc	            |                                                                  |
+|domTip	            |Tipus de domicili: POST, APTC                                                                  |
+|domTLoc	            |Tipus de local                                                                  |
 |apartatCorreus		|Apartat de Correus.                                               |
 |baixa				|Dades de baixa del Domicili.                                      |
-|bis1	            |                                                                  |
-|bis2	            |                                                                  |
+|bis1	            |Si és bis, número 1 bis                                                                  |
+|bis2	            |Si és bis, número 1 bis                                                                  |
 |bloc				|Número de bloc.                                                   |
 |codiCarrer			|Codi del Carrer.                                                  |
 |codiDomicili		|Codi del Domicili.                                                |
-|codiGIS	            |                                                                  |
+|codiGIS	            |Referència G.I.S                                                                  |
 |codiPostal			|Codi Postal.                                                      |
-|codiPseudovia	    |                                                                  |
+|codiPseudovia	    |Codi pseudovia                                                                  |
 |codiTipusdomicili	|Tipus de Domicili.                                                |
 |codiTipusLocal		|Tipus de Local.                                                   |
-|escala	Escala.     |                                                                  |
-|hm	                |                                                                  |
+|escala	Escala.     |Escala.                                                                  |
+|hm	                |Hectòmetre per vies no numerades                                                                  |
 |km					|Kilòmetre per vies no numerades.                                  |
 |municipi			|Dades del Municipi. Inclou país, província i municipi.            |
 |num1				|Número 1 del Domicili.                                            |
 |num2				|Número 2 del Domicili.                                            |
 |observacions		|Observacions vàries.                                              |
-|pis	Pis.            |                                                                  |
-|pobledesc	        |                                                                  |
+|pis	Pis.            |Pis                                                                  |
+|pobledesc	        |Nom de la població                                                                 |
 |porta				|Porta.                                                            |
 |portal				|Número de portal.                                                 |
 |refCadastral		|Referència Cadastral de l’immoble.                                |
-|duplicarAcceptat	|                                                                  |
-|g_G5Municod	        |                                                                  |
-|g_G5Paiscod	        |                                                                  |
-|g_G5provcod	        |                                                                  |
+|duplicarAcceptat	|Permet inserir el domicili encara que ja existeixi                                                                  |
+|g_G5Municod	        |Funcionalitat no implementada                                                                  |
+|g_G5Paiscod	        |Funcionalitat no implementada                                                                  |
+|g_G5provcod	        |Funcionalitat no implementada                                                                  |
 |maxResults	        |                                                                  |
 |nomesBaixa	        |                                                                  |
 |senseAproximadors	|                                                                  |
@@ -1320,19 +1320,19 @@ Expected response: {
 |Paràmetres| |
 |----------|-|
 |g_G5Paiscod	      |                                      |
-|maxResult	      |                                      |
-|baixa	          |                                      |
+|maxResult	      |Màxim resultats. S’utilitza en el mètode de cerca de persones: /persones/search                                      |
+|baixa	          |En el cas que sigui baixa: dataBaixa i esBaixa: 0 No; 1 Sí                                      |
 |codiIdioma			|Codi d’idioma (per defecte català). |
 |codiNacionalitat	|Codi de país.                       |
 |codiTipusPersona	|Cod de tipus de persona.            |
 |codi				|Codi de persona.                    |
 |codiEstudis			|Codi d’estudis                      |
-|cognom1	          |                                      |
-|cognom2	          |                                      |
-|contacte	      |                                      |
+|cognom1	          |Primer cognom de la persona                                      |
+|cognom2	          |Segon cognom de la persona                                      |
+|contacte	      |Cercar per contacte. No s’utilitza                                      |
 |dataBaixa2	      |                                      |
-|dataNaixement	  |                                      |
-|descNacionalitat	|                                    |
+|dataNaixement	  |Data de naixement de la persona                                      |
+|descNacionalitat	|Nom nacionalitat                                    |
 |descTipusPersona	|                                    |
 |esContribuent		|True/false.                         |
 |esHabitant			|True/false.                         |
@@ -1340,25 +1340,25 @@ Expected response: {
 |esPersnull			|True/false.                         |
 |formaContacte	  |                                      |
 |gesCont	          |                                      |
-|municipiNaixement|                                       |
+|municipiNaixement|Codis de pais, província i municipi de naixement                                       |
 |nif					|Part numèrica del NIF.                 |
 |nifDC				|Dígit de control de l NIF.             |
-|nifOrig	          |                                       |
-|nom	              |                                       |
+|nifOrig	          |NIF sencer                                       |
+|nom	              |Nom persona                                       |
 |nomComplet			|Nom i cognoms.                         |
-|nomesBaixa	      |                                       |
-|particula1	      |                                       |
-|particula2	      |                                       |
-|passaport	      |                                       |
+|nomesBaixa	      |Boleà, cercar només persones que estan de baixas. S’utilitza en el mètode de cerca de persones: /persones/search                                       |
+|particula1	      |Partícula del primer cognom. Exemple: Marta De Martín Gómez.                                       |
+|particula2	      |Partícula del segon cognom. Exemple: Marta Martín De Gómez.                                       |
+|passaport	      |Número passaport                                       |
 |password	      |                                       |
-|perssw	          |                                       |
-|sexe	          |                                       |
-|stdapladd	      |                                       |
-|stdasplmod	      |                                       |
-|stdhgr	          |                                       |
-|stdhmod	          |                                       |
-|stdugr	          |                                       |
-|stdumod	          |                                       |
+|perssw	          |0 o A                                       |
+|sexe	          |1 ó 2                                       |
+|stdapladd	      |Aplicació per la que s’afegeix: HAB, SDE, BIM...                                       |
+|stdasplmod	      |Aplicació per la que es modifica                                      |
+|stdhgr	          |Hora de gravat                                       |
+|stdhmod	          |Hora de modificat                                       |
+|stdugr	          |Usuari gravat                                       |
+|stdumod	          |Usuari modifica                                       |
 
 
 ***Exemple:***
@@ -1519,7 +1519,7 @@ Exemple:
 |Paràmetres| |
 |----------|-|
 |codiPersona			|Codi de la persona a recuperar.        |
-|formatNomCosnoms	|                                       |
+|formatNomCosnoms	|Booleà, si volem obtenir el nom en format net (true) o format segons la base de dades (false).                                       |
 |g_G5Paiscod	        |                                       |
 |mostrarBaixes	    |                                       |
 
@@ -2545,17 +2545,17 @@ Expected response: {
 
 |Paràmetres| |
 |----------|-|
-|codiEntitat	                          |
-|copiarDownload4J	                  |
-|copiarFileBase64	                  |
-|crearPDF	                          |
-|directori	                          |
-|idioma	                              |
-|numeroRegistr 	                      |
-|plantilla	                          |
-|quantitat	                          |
-|recalcularDirectoriPlantilles	      |
-|urlServer	                          |
+|codiEntitat	                          |Codi entitat |
+|copiarDownload4J	                  |Booleà, si es vol obtenir l’enllaç amb el document|
+|copiarFileBase64	                  |Booleà, si es vol obtenir el fitxer en base64|
+|crearPDF	                          |Booleà, si es vol crea el report de les entrades|
+|directori	                          |Directori on generar el pdf|
+|idioma	                              |Català o castellà|
+|numeroRegistr 	                      |Número del registre d’entrada|
+|plantilla	                          |Plantilla pel duplicat del pdf|
+|quantitat	                          |Quantitat de registres a duplicar|
+|recalcularDirectoriPlantilles	      |Recalcular el directori de les plantilles degut al sistema operatiu|
+|urlServer	                          |Url servidor per la ruta del download4J|
 
 ***Exemple:***
 
@@ -2616,20 +2616,20 @@ Expected response: {
 ```
 |Paràmetres| |
 |----------|-|
-|areacodCreador	               |                                                        |
+|areacodCreador	               |Codi de l’àrea                                                        |
 |assumcod						|Codi d’assumpte.                                       |
 |codiEntitat						|Codi d’entitat. Si no es multi-entitat, posar 1.       |
-|copiaDownload4J	               |                                                        |
-|copiarFileBase64	           |                                                        |
+|copiaDownload4J	               |Booleà, si es vol obtenir l’enllaç amb el document                                                        |
+|copiarFileBase64	           |Booleà, si es vol obtenir el fitxer en base64                                                        |
 |crearPDF						|Indica si cal crear un PDF (true/false).               |
 |data							|Data del registre reservat.                            |
 |hora							|Hora del registre reservat.                            |
 |idioma							|Codi d’idioma.                                         |
-|plantilla	                   |                                                        |
+|plantilla	                   |Plantilla pel pdf                                                        |
 |quantitat						|Número de registres a reservar.                        |
-|recalcularDirectoriPlantilles	|                                                       |
+|recalcularDirectoriPlantilles	|Recalcular el directori de les plantilles degut al sistema operatiu                                                       |
 |tipusRegistre					|Tipus de registre E/S (entrada o sortida).             |
-|urlServer	                   |      |
+|urlServer	                   |Url servidor per la ruta del download4J      |
 
 
 ***Exemple:***
@@ -3159,67 +3159,67 @@ Expected response: {
 
 |Paràmetres| |
 |----------|-|
-|arxiu	                          |
-|codiAreaAssumpte	              |
-|codiAreaCreador	                  |
-|codiAssumpte	                  |
-|codiDepartamentAssumpte	          |
-|codiDepartamentCreador	          |
-|coientitat	                      |
-|codiExtracte	                  |
-|codiIdioma	                      |
-|codiOrganismeOrigen	              |
-|codiPersona	                      |
-|codiRepresentant	              |
-|codiTerritori	                  |
-|codiTipusTransport	              |
-|comptDomiciliOrganisme	          |
-|comptDomiciliPersona	           |
-|comptDomiciliRepresentant00        |
-|contingutExtracte	               |
-|dataDocument	                   |
-|dataPresentacio	                   |
-|dataRegistreOrganisme	           |
-|dataTransport	                   |
-|descAreaAssumpte	               |
-|descDepartamentAssumpte	           |
-|domNot	                           |
-|efactComptabilitat	               |
-|efactEstat	                       |
-|efactNumfactura	                   |
-|efactObs	                       |
-|efactProveidor	                   |
-|fcontactMail	                   |
-|fcontactSms	                       |
-|numPagines	                       |
-|numconordreMail	                   |
-|numconordreSms	                   |
-|numeroEntrada	                   |
-|numeroEntradaEntitat	           |
-|numeroFormaContacte	               |
-|numeroRegistreOrganisme	           |
-|numeroTransport	                   |
-|observacionsDocumen t	           |
-|observacionsTransport	           |
-|persNifFoto	                       |
-|persNomFoto	                       |
-|persNot	                           |
-|perscontacn	                       |
-|persndMail	                       |
-|persnmSms	                       |
-|persnumconordre	                   |
-|plataforma	                       |
-|registreRelacionat	               |
-|repcontac	                       |
-|repfcontac	                       |
-|resNumExt	                       |
-|resorgcontac	                   |
-|resorgfcontac	                   |
-|responsable	                       |
-|tipusOrganisme	                   |
-|tractat	                           |
-|tramcod	                           |
-|tramdesc	                       |
+|arxiu	                          |Codi d’arxiu del document|
+|codiAreaAssumpte	              |Codi àrea de destí|
+|codiAreaCreador	                  |Codi àrea de registre|
+|codiAssumpte	                  |Codi assumpte|
+|codiDepartamentAssumpte	          |Codi departament destí|
+|codiDepartamentCreador	          |Codi departament de registre|
+|coientitat	                      |Codi entitat|
+|codiExtracte	                  |Codi extracte del document|
+|codiIdioma	                      |Codi idioma del document|
+|codiOrganismeOrigen	              |Codi organisme origen del document|
+|codiPersona	                      |Codi persona|
+|codiRepresentant	              |Codi representant|
+|codiTerritori	                  |Codi domicili relacionat|
+|codiTipusTransport	              |Codi mitjà de transport del document|
+|comptDomiciliOrganisme	          |Número registre organisme origen|
+|comptDomiciliPersona	           |Número ordre domicili interessat|
+|comptDomiciliRepresentant        |Número ordre domicili representant|
+|contingutExtracte	               |Sinòpsis del document|
+|dataDocument	                   |Data del document|
+|dataPresentacio	                   |Data de presentació del document|
+|dataRegistreOrganisme	           |Data de registre en l’organisme origen|
+|dataTransport	                   |Data de transport|
+|descAreaAssumpte	               |Descripció àrea assumpte|
+|descDepartamentAssumpte	           |Descripció departament assumpte|
+|domNot	                           |Domicili notificació (Interessat o Representant)|
+|efactComptabilitat	               |eFactura Comptabilitat|
+|efactEstat	                       |Estat eFactura|
+|efactNumfactura	                   |Número eFactura|
+|efactObs	                       |Observacions eFactura|
+|efactProveidor	                   |Preveïdor eFactura|
+|fcontactMail	                   |Email contacte factura|
+|fcontactSms	                       |Telèfon contacte factura|
+|numPagines	                       |Número de pàgines del document|
+|numconordreMail	                   |Ordre forma de contacte email|
+|numconordreSms	                   |Ordre forma de contacte sms|
+|numeroEntrada	                   |Codi del registre d’entrada, format EYYYYXXXXXX|
+|numeroEntradaEntitat	           ||
+|numeroFormaContacte	             |Forma de contacte  |
+|numeroRegistreOrganisme	           |Número de registre organisme origen|
+|numeroTransport	                   |Número relacionat amb el mitjà de transport|
+|observacionsDocument	           |Observacions del document|
+|observacionsTransport	           |Observacions del transport|
+|persNifFoto	                       |NIF complet de la persona|
+|persNomFoto	                       |Nom complet de la persona|
+|persNot	                           |Persona a notificar (Interessat o Representant)|
+|perscontacn	                       |Contacte de la persona: correu electrònic, mòbil, telèfon, oficina...|
+|persndMail	                       |Número email|
+|persnmSms	                       |Número sms|
+|persnumconordre	                   |Contacte de la persona: correu electrònic, mòbil, telèfon, oficina...|
+|plataforma	                       |Plataforma de notificació: AOC o null|
+|registreRelacionat	               |Document relacionat amb el registre d’entrada|
+|repcontac	                       ||
+|repfcontac	                       ||
+|resNumExt	                       ||
+|resorgcontac	                   ||
+|resorgfcontac	                   ||
+|responsable	                       |Responsable|
+|tipusOrganisme	                   ||
+|tractat	                           |Entrada tractada|
+|tramcod	                           |Codi del tràmit|
+|tramdesc	                       |Descripció del tràmit|
 
 ***Exemple:***
 
