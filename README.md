@@ -71,6 +71,7 @@ Els recursos que ofereix la API són:
 * Registre de Sortida
 * Expedients
 * Documents
+* Organigrama
 
 A continuació els descrivim en detall.
 
