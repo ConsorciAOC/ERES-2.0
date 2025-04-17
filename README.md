@@ -4673,7 +4673,7 @@ Expected response: {
 
 ```
 
-### 3.6.6 Assignar Interessat.
+### 3.6.6 Cerca.
 
 | Mètode | Ruta |
 | ------ | ---- | 
@@ -4775,7 +4775,7 @@ Expected response: {
 
 ```
 
-### 3.6.7 Recuperar Documents relacionats.
+### 3.6.7 Assignar interessat a registre de sortida.
 
 | Mètode | Ruta |
 | ------ | ---- | 
@@ -4841,7 +4841,7 @@ Expected response: {
 
 ```
 
-# 3.6.8	Recuperar Entrades relacionades.
+### 3.6.8	Recuperar Sortides relacionades.
 
 | Mètode | Ruta |
 | ------ | ---- | 
@@ -4889,7 +4889,7 @@ Expected response: {
 }
 ```
 
-### 3.6.9 Recuperar Sortides relacionades. 
+### 3.6.9 Recuperar Entrades relacionades. 
 
 | Mètode | Ruta |
 | ------ | ---- | 
