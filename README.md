@@ -454,7 +454,7 @@ Expected response body:
 ```
 
 
-### 3.1.7 Modificar Sigles dels Carrers
+### 3.1.7 Crear o modificar Sigles dels Carrers
 
 | Mètode | Ruta |
 | ------ | ---- | 
@@ -1240,7 +1240,7 @@ Expected response: {
 
 
 
-### 3.3.2 Modificar
+### 3.3.2 Crear o modificar
 
 | Mètode | Ruta |
 | ------ | ---- | 
@@ -2308,7 +2308,7 @@ Expected response: {
 
 | Mètode | Ruta |
 | ------ | ---- | 
-|POST | /persones/noticies/gett	|	
+|POST | /persones/noticies/get	|	
 
 ***Cos de la petició***:
 
