@@ -124,7 +124,7 @@ A continuació els descrivim en detall.
 }
 ```
 
-|Paràmetres| | |
+|Paràmetres| |Límit|
 |----------|-|-|
 |carrer.baixa			| Dades de baixa del Carrer.                                                         | Char(1) |
 |carrer.codiCarrer		| Codi del Carrer.                                                                   | Number(5) |
