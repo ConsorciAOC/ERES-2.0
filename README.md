@@ -3165,7 +3165,7 @@ Expected response: {
 ```
 
 |Paràmetres| |Límit|
-|----------|-||
+|----------|-|-|
 |arxiu	                          |Codi d’arxiu del document||
 |codiAreaAssumpte	              |Codi àrea de destí||
 |codiAreaCreador	                  |Codi àrea de registre||
