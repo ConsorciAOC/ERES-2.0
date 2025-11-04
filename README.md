@@ -1086,9 +1086,9 @@ Expected response: {
 ```
 
 
-|Paràmetres| |
-|----------|-|
-|codiTerritori	|Codi de territori. |
+|Paràmetres| |Límit|
+|----------|-||
+|codiTerritori	|Codi de territori. |Number(8)|
 
 ***Exemple:***
 
@@ -1322,48 +1322,50 @@ Expected response: {
     ]
 }
 ```
-|Paràmetres| |
-|----------|-|
-|g_G5Paiscod	      |                                      |
-|maxResult	      |Màxim resultats. S’utilitza en el mètode de cerca de persones: /persones/search                                      |
-|baixa	          |En el cas que sigui baixa: dataBaixa i esBaixa: 0 No; 1 Sí                                      |
-|codiIdioma			|Codi d’idioma (per defecte català). |
-|codiNacionalitat	|Codi de país.                       |
-|codiTipusPersona	|Cod de tipus de persona.            |
-|codi				|Codi de persona.                    |
-|codiEstudis			|Codi d’estudis                      |
-|cognom1	          |Primer cognom de la persona                                      |
-|cognom2	          |Segon cognom de la persona                                      |
-|contacte	      |Cercar per contacte. No s’utilitza                                      |
-|dataBaixa2	      |                                      |
-|dataNaixement	  |Data de naixement de la persona                                      |
-|descNacionalitat	|Nom nacionalitat                                    |
-|descTipusPersona	|                                    |
-|esContribuent		|True/false.                         |
-|esHabitant			|True/false.                         |
-|esNifModificable	|True/false.                         |
-|esPersnull			|True/false.                         |
-|formaContacte	  |                                      |
-|gesCont	          |                                      |
-|municipiNaixement|Codis de pais, província i municipi de naixement                                       |
-|nif					|Part numèrica del NIF.                 |
-|nifDC				|Dígit de control de l NIF.             |
-|nifOrig	          |NIF sencer                                       |
-|nom	              |Nom persona                                       |
-|nomComplet			|Nom i cognoms.                         |
-|nomesBaixa	      |Boleà, cercar només persones que estan de baixas. S’utilitza en el mètode de cerca de persones: /persones/search                                       |
-|particula1	      |Partícula del primer cognom. Exemple: Marta De Martín Gómez.                                       |
-|particula2	      |Partícula del segon cognom. Exemple: Marta Martín De Gómez.                                       |
-|passaport	      |Número passaport                                       |
-|password	      |                                       |
-|perssw	          |0 o A                                       |
-|sexe	          |1 ó 2                                       |
-|stdapladd	      |Aplicació per la que s’afegeix: HAB, SDE, BIM...                                       |
-|stdasplmod	      |Aplicació per la que es modifica                                      |
-|stdhgr	          |Hora de gravat                                       |
-|stdhmod	          |Hora de modificat                                       |
-|stdugr	          |Usuari gravat                                       |
-|stdumod	          |Usuari modifica                                       |
+|Paràmetres| |Límit|
+|----------|-|-|
+|g_G5Paiscod	      |                                      ||
+|maxResult	      |Màxim resultats. S’utilitza en el mètode de cerca de persones: /persones/search                                      ||
+|baixa	          |En el cas que sigui baixa: dataBaixa i esBaixa: 0 No; 1 Sí                                      |Number(1)|
+|codiIdioma			|Codi d’idioma (per defecte català). |Char(1)|
+|codiNacionalitat	|Codi de país.                       |Number(3)|
+|codiTipusPersona	|Cod de tipus de persona.            |Char(1)|
+|codi				|Codi de persona.                    |Number(8)|
+|codiEstudis			|Codi d’estudis                      ||
+|cognom1	          |Primer cognom de la persona                                      |String(25)|
+|cognom2	          |Segon cognom de la persona                                      |String(25)|
+|contacte	      |Cercar per contacte. No s’utilitza                                      ||
+|dataBaixa2	      |                                      |String(8)|
+|dataNaixement	  |Data de naixement de la persona                                      |Char(8)|
+|descNacionalitat	|Nom nacionalitat                                    |Number(3)|
+|descTipusPersona	|                                    |boolean|
+|esContribuent		|True/false.                         |boolean|
+|esHabitant			|True/false.                         |boolean|
+|esNifModificable	|True/false.                         |boolean|
+|esPersnull			|True/false.                         |boolean|
+|formaContacte	  |                                      ||
+|gesCont	          |                                      |boolean|
+|codMunicipi	|Codi del Municipi.          												  |Number(3)|
+|codPais		|Codi del País.                |Number(3)|
+|codiProvincia|Codi de provincia.           |Number(2)|
+|nif					|Part numèrica del NIF.                 |Number(8)|
+|nifDC				|Dígit de control de l NIF.             |char(1)|
+|nifOrig	          |NIF sencer                                       |char(10)|
+|nom	              |Nom persona                                       |String(255)|
+|nomComplet			|Nom i cognoms.                         |String(255)|
+|nomesBaixa	      |Boleà, cercar només persones que estan de baixas. S’utilitza en el mètode de cerca de persones: /persones/search                                       |boolean|
+|particula1	      |Partícula del primer cognom. Exemple: Marta De Martín Gómez.                                       |char(6)|
+|particula2	      |Partícula del segon cognom. Exemple: Marta Martín De Gómez.                                       |char(6)|
+|passaport	      |Número passaport                                       |char(20)|
+|password	      |                                       |char(10)|
+|perssw	          |0 o A                                       |char(1)|
+|sexe	          |1 ó 2                                       |char(1)|
+|stdapladd	      |Aplicació per la que s’afegeix: HAB, SDE, BIM...                                       |char(5)|
+|stdasplmod	      |Aplicació per la que es modifica                                      |char(5)|
+|stdhgr	          |Hora de gravat                                       |char(6)|
+|stdhmod	          |Hora de modificat                                       |char(8)|
+|stdugr	          |Usuari gravat                                       |char(20)|
+|stdumod	          |Usuari modifica                                       |char(20)|
 
 
 ***Exemple:***
@@ -1494,12 +1496,12 @@ Expected response: {
 }
 ```
 
-|Paràmetres| |
-|----------|-|
-|cognom1		|Primer cognom.                   |
-|cognom2		|Segon cognom.                     |
-|document	|Document identificatiu            |
-|nom			|Nom.                              |
+|Paràmetres| |Límit|
+|----------|-|-|
+|cognom1		|Primer cognom.                   |String(25)|
+|cognom2		|Segon cognom.                     |String(25)|
+|document	|Document identificatiu            ||
+|nom			|Nom.                              |String(255)|
 Exemple:
 
 ### 3.3.4 Recuperar una Persones
@@ -1521,12 +1523,12 @@ Exemple:
     "mostrarBaixes": true
 }
 ```
-|Paràmetres| |
-|----------|-|
-|codiPersona			|Codi de la persona a recuperar.        |
-|formatNomCosnoms	|Booleà, si volem obtenir el nom en format net (true) o format segons la base de dades (false).                                       |
-|g_G5Paiscod	        |                                       |
-|mostrarBaixes	    |                                       |
+|Paràmetres| |Límit|
+|----------|-|-|
+|codiPersona			|Codi de la persona a recuperar.        |Number(8)|
+|formatNomCosnoms	|Booleà, si volem obtenir el nom en format net (true) o format segons la base de dades (false).                                       |boolean|
+|g_G5Paiscod	        |                                       ||
+|mostrarBaixes	    |                                       |boolean|
 
 
 ***Exemple:***
