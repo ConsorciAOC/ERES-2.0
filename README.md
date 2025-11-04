@@ -205,8 +205,8 @@ Cos de la petició
 	}
 }
 ```
-|Paràmetres| |
-|----------|-|
+|Paràmetres| | |
+|----------|-| |
 |carrer.codCarrer	|Codi del Carrer.              |Number(5)|
 |carrer.codMunicipi	|Codi del Municipi.            |Number(3)|
 |carrer.codPais		|Codi del País.                |Number(3)|
