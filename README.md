@@ -733,12 +733,12 @@ Expected response body:
 
 ```
 
-|Paràmetres| |
-|----------|-|
-|codiDomicili	|Codi delDomicili.             |
-|codiMunicipi	|Codi del municipi.            |
-|codiPais		|Codi del País.                |
-|codiProvincia	|Codi de la Província.         |
+|Paràmetres| |Límit|
+|----------|-|-|
+|codiDomicili	|Codi delDomicili.             |Number(5)|
+|codiMunicipi	|Codi del municipi.            |Number(3)|
+|codiPais		|Codi del País.                |Number(3)|
+|codiProvincia	|Codi de la Província.         |Number(2)|
 
 ***Exemple:***
 
@@ -1087,7 +1087,7 @@ Expected response: {
 
 
 |Paràmetres| |Límit|
-|----------|-||
+|----------|-|-|
 |codiTerritori	|Codi de territori. |Number(8)|
 
 ***Exemple:***
@@ -1872,14 +1872,14 @@ Expected response: {
 ```
 
 
-|Paràmetres| |
-|----------|-|
-|codi1		|Codi partícula                     |
-|codi2		|No s’utilitza.                     |
-|comptador	|No s’utilitza.                     |
-|descripcio	|Descripció de la partícula.        |
-|descripcio2	|No s’utilitza.                     |
-|qual		|No s’utilitza.                     |
+|Paràmetres| |Límit|
+|----------|-|-|
+|codi1		|Codi partícula                     |String(6)|
+|codi2		|No s’utilitza.                     ||
+|comptador	|No s’utilitza.                     ||
+|descripcio	|Descripció de la partícula.        ||
+|descripcio2	|No s’utilitza.                     |String(255)|
+|qual		|No s’utilitza.                     ||
 
 ***Exemple:***
 
@@ -2087,11 +2087,11 @@ Expected response: {
 
 ```
 
-|Paràmetres| |
-|----------|-|
-|codiDomicili	|Codi del domicili.                          |
-|perscod			|Codi de persona.                            |
-|persnd			|Número de domicili de la persona            |
+|Paràmetres| |Límits|
+|----------|-|-|
+|codiDomicili	|Codi del domicili.                          |Number(5)|
+|perscod			|Codi de persona.                            |Number(8)|
+|persnd			|Número de domicili de la persona            |Number(6)|
 
 
 ***Exemple:***
@@ -2550,19 +2550,19 @@ Expected response: {
 }
 ```
 
-|Paràmetres| |
-|----------|-|
-|codiEntitat	                          |Codi entitat |
-|copiarDownload4J	                  |Booleà, si es vol obtenir l’enllaç amb el document|
-|copiarFileBase64	                  |Booleà, si es vol obtenir el fitxer en base64|
-|crearPDF	                          |Booleà, si es vol crea el report de les entrades|
-|directori	                          |Directori on generar el pdf|
-|idioma	                              |Català o castellà|
-|numeroRegistr 	                      |Número del registre d’entrada|
-|plantilla	                          |Plantilla pel duplicat del pdf|
-|quantitat	                          |Quantitat de registres a duplicar|
-|recalcularDirectoriPlantilles	      |Recalcular el directori de les plantilles degut al sistema operatiu|
-|urlServer	                          |Url servidor per la ruta del download4J|
+|Paràmetres| |Límit|
+|----------|-|-|
+|codiEntitat	                          |Codi entitat |char(5)|
+|copiarDownload4J	                  |Booleà, si es vol obtenir l’enllaç amb el document|boolean|
+|copiarFileBase64	                  |Booleà, si es vol obtenir el fitxer en base64|boolean|
+|crearPDF	                          |Booleà, si es vol crea el report de les entrades|boolean|
+|directori	                          |Directori on generar el pdf|String(255)|
+|idioma	                              |Català o castellà||
+|numeroRegistr 	                      |Número del registre d’entrada|char(11)|
+|plantilla	                          |Plantilla pel duplicat del pdf||
+|quantitat	                          |Quantitat de registres a duplicar||
+|recalcularDirectoriPlantilles	      |Recalcular el directori de les plantilles degut al sistema operatiu||
+|urlServer	                          |Url servidor per la ruta del download4J||
 
 ***Exemple:***
 
@@ -2621,22 +2621,22 @@ Expected response: {
 }
 
 ```
-|Paràmetres| |
-|----------|-|
-|areacodCreador	               |Codi de l’àrea                                                        |
-|assumcod						|Codi d’assumpte.                                       |
-|codiEntitat						|Codi d’entitat. Si no es multi-entitat, posar 1.       |
-|copiaDownload4J	               |Booleà, si es vol obtenir l’enllaç amb el document                                                        |
-|copiarFileBase64	           |Booleà, si es vol obtenir el fitxer en base64                                                        |
-|crearPDF						|Indica si cal crear un PDF (true/false).               |
-|data							|Data del registre reservat.                            |
-|hora							|Hora del registre reservat.                            |
-|idioma							|Codi d’idioma.                                         |
-|plantilla	                   |Plantilla pel pdf                                                        |
-|quantitat						|Número de registres a reservar.                        |
-|recalcularDirectoriPlantilles	|Recalcular el directori de les plantilles degut al sistema operatiu                                                       |
-|tipusRegistre					|Tipus de registre E/S (entrada o sortida).             |
-|urlServer	                   |Url servidor per la ruta del download4J      |
+|Paràmetres| |Límit|
+|----------|-|-|
+|areacodCreador	               |Codi de l’àrea                                                        |char(8)|
+|assumcod						|Codi d’assumpte.                                       |char(4)|
+|codiEntitat						|Codi d’entitat. Si no es multi-entitat, posar 1.       |char(5)|
+|copiaDownload4J	               |Booleà, si es vol obtenir l’enllaç amb el document                                                        |boolean|
+|copiarFileBase64	           |Booleà, si es vol obtenir el fitxer en base64                                                        |boolean|
+|crearPDF						|Indica si cal crear un PDF (true/false).               |boolean|
+|data							|Data del registre reservat.                            |char(8)|
+|hora							|Hora del registre reservat.                            |char(6)|
+|idioma							|Codi d’idioma.                                         |char(1)|
+|plantilla	                   |Plantilla pel pdf                                                        ||
+|quantitat						|Número de registres a reservar.                        ||
+|recalcularDirectoriPlantilles	|Recalcular el directori de les plantilles degut al sistema operatiu                                                       ||
+|tipusRegistre					|Tipus de registre E/S (entrada o sortida).             |char(1)|
+|urlServer	                   |Url servidor per la ruta del download4J      ||
 
 
 ***Exemple:***
@@ -3164,69 +3164,69 @@ Expected response: {
 }
 ```
 
-|Paràmetres| |
-|----------|-|
-|arxiu	                          |Codi d’arxiu del document|
-|codiAreaAssumpte	              |Codi àrea de destí|
-|codiAreaCreador	                  |Codi àrea de registre|
-|codiAssumpte	                  |Codi assumpte|
-|codiDepartamentAssumpte	          |Codi departament destí|
-|codiDepartamentCreador	          |Codi departament de registre|
-|coientitat	                      |Codi entitat|
-|codiExtracte	                  |Codi extracte del document|
-|codiIdioma	                      |Codi idioma del document|
-|codiOrganismeOrigen	              |Codi organisme origen del document|
-|codiPersona	                      |Codi persona|
-|codiRepresentant	              |Codi representant|
-|codiTerritori	                  |Codi domicili relacionat|
-|codiTipusTransport	              |Codi mitjà de transport del document|
-|comptDomiciliOrganisme	          |Número registre organisme origen|
-|comptDomiciliPersona	           |Número ordre domicili interessat|
-|comptDomiciliRepresentant        |Número ordre domicili representant|
-|contingutExtracte	               |Sinòpsis del document|
-|dataDocument	                   |Data del document|
-|dataPresentacio	                   |Data de presentació del document|
-|dataRegistreOrganisme	           |Data de registre en l’organisme origen|
-|dataTransport	                   |Data de transport|
-|descAreaAssumpte	               |Descripció àrea assumpte|
-|descDepartamentAssumpte	           |Descripció departament assumpte|
-|domNot	                           |Domicili notificació (Interessat o Representant)|
-|efactComptabilitat	               |eFactura Comptabilitat|
-|efactEstat	                       |Estat eFactura|
-|efactNumfactura	                   |Número eFactura|
-|efactObs	                       |Observacions eFactura|
-|efactProveidor	                   |Preveïdor eFactura|
-|fcontactMail	                   |Email contacte factura|
-|fcontactSms	                       |Telèfon contacte factura|
-|numPagines	                       |Número de pàgines del document|
-|numconordreMail	                   |Ordre forma de contacte email|
-|numconordreSms	                   |Ordre forma de contacte sms|
-|numeroEntrada	                   |Codi del registre d’entrada, format EYYYYXXXXXX|
-|numeroEntradaEntitat	           ||
-|numeroFormaContacte	             |Forma de contacte  |
-|numeroRegistreOrganisme	           |Número de registre organisme origen|
-|numeroTransport	                   |Número relacionat amb el mitjà de transport|
-|observacionsDocument	           |Observacions del document|
-|observacionsTransport	           |Observacions del transport|
-|persNifFoto	                       |NIF complet de la persona|
-|persNomFoto	                       |Nom complet de la persona|
-|persNot	                           |Persona a notificar (Interessat o Representant)|
-|perscontacn	                       |Contacte de la persona: correu electrònic, mòbil, telèfon, oficina...|
-|persndMail	                       |Número email|
-|persnmSms	                       |Número sms|
-|persnumconordre	                   |Contacte de la persona: correu electrònic, mòbil, telèfon, oficina...|
-|plataforma	                       |Plataforma de notificació: AOC o null|
-|registreRelacionat	               |Document relacionat amb el registre d’entrada|
-|repcontac	                       ||
-|repfcontac	                       ||
-|resNumExt	                       ||
-|resorgcontac	                   ||
-|resorgfcontac	                   ||
-|responsable	                       |Responsable|
-|tipusOrganisme	                   ||
-|tractat	                           |Entrada tractada|
-|tramcod	                           |Codi del tràmit|
-|tramdesc	                       |Descripció del tràmit|
+|Paràmetres| |Límit|
+|----------|-||
+|arxiu	                          |Codi d’arxiu del document||
+|codiAreaAssumpte	              |Codi àrea de destí||
+|codiAreaCreador	                  |Codi àrea de registre||
+|codiAssumpte	                  |Codi assumpte||
+|codiDepartamentAssumpte	          |Codi departament destí||
+|codiDepartamentCreador	          |Codi departament de registre||
+|coientitat	                      |Codi entitat||
+|codiExtracte	                  |Codi extracte del document||
+|codiIdioma	                      |Codi idioma del document||
+|codiOrganismeOrigen	              |Codi organisme origen del document||
+|codiPersona	                      |Codi persona||
+|codiRepresentant	              |Codi representant||
+|codiTerritori	                  |Codi domicili relacionat||
+|codiTipusTransport	              |Codi mitjà de transport del document||
+|comptDomiciliOrganisme	          |Número registre organisme origen||
+|comptDomiciliPersona	           |Número ordre domicili interessat||
+|comptDomiciliRepresentant        |Número ordre domicili representant||
+|contingutExtracte	               |Sinòpsis del document||
+|dataDocument	                   |Data del document||
+|dataPresentacio	                   |Data de presentació del document||
+|dataRegistreOrganisme	           |Data de registre en l’organisme origen||
+|dataTransport	                   |Data de transport||
+|descAreaAssumpte	               |Descripció àrea assumpte||
+|descDepartamentAssumpte	           |Descripció departament assumpte||
+|domNot	                           |Domicili notificació (Interessat o Representant)||
+|efactComptabilitat	               |eFactura Comptabilitat||
+|efactEstat	                       |Estat eFactura||
+|efactNumfactura	                   |Número eFactura||
+|efactObs	                       |Observacions eFactura||
+|efactProveidor	                   |Preveïdor eFactura||
+|fcontactMail	                   |Email contacte factura||
+|fcontactSms	                       |Telèfon contacte factura||
+|numPagines	                       |Número de pàgines del document||
+|numconordreMail	                   |Ordre forma de contacte email||
+|numconordreSms	                   |Ordre forma de contacte sms||
+|numeroEntrada	                   |Codi del registre d’entrada, format EYYYYXXXXXX||
+|numeroEntradaEntitat	           |||
+|numeroFormaContacte	             |Forma de contacte  ||
+|numeroRegistreOrganisme	           |Número de registre organisme origen||
+|numeroTransport	                   |Número relacionat amb el mitjà de transport||
+|observacionsDocument	           |Observacions del document||
+|observacionsTransport	           |Observacions del transport||
+|persNifFoto	                       |NIF complet de la persona||
+|persNomFoto	                       |Nom complet de la persona||
+|persNot	                           |Persona a notificar (Interessat o Representant)||
+|perscontacn	                       |Contacte de la persona: correu electrònic, mòbil, telèfon, oficina...||
+|persndMail	                       |Número email||
+|persnmSms	                       |Número sms||
+|persnumconordre	                   |Contacte de la persona: correu electrònic, mòbil, telèfon, oficina...||
+|plataforma	                       |Plataforma de notificació: AOC o null||
+|registreRelacionat	               |Document relacionat amb el registre d’entrada||
+|repcontac	                       |||
+|repfcontac	                       |||
+|resNumExt	                       |||
+|resorgcontac	                   |||
+|resorgfcontac	                   |||
+|responsable	                       |Responsable||
+|tipusOrganisme	                   |||
+|tractat	                           |Entrada tractada||
+|tramcod	                           |Codi del tràmit||
+|tramdesc	                       |Descripció del tràmit||
 
 ***Exemple:***
 
