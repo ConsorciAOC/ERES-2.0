@@ -207,10 +207,10 @@ Cos de la petició
 ```
 |Paràmetres| |
 |----------|-|
-|carrer.codCarrer	|Codi del Carrer.              |
-|carrer.codMunicipi	|Codi del Municipi.            |
-|carrer.codPais		|Codi del País.                |
-|carrer.codiProvincia|Codi de provincia.           |
+|carrer.codCarrer	|Codi del Carrer.              |Number(5)|
+|carrer.codMunicipi	|Codi del Municipi.            |Number(3)|
+|carrer.codPais		|Codi del País.                |Number(3)|
+|carrer.codiProvincia|Codi de provincia.           |Number(2)|
 
 ***Exemple:***
 ```json
@@ -282,13 +282,13 @@ Expected response body:
 }
 ```
 
-|Paràmetres| |
-|----------|-|
-|codiCarrer	|Codi del Carrer.                                                                           |
-|maxResults	|Número màxim de resultats retornats.                                                       |
-|municipi	|Identificador de municipi. Inclou codi de país, codi de provincia i codi de municipi.      |
-|nomCarrer	|Nom del carrer.                                                                            |
-|tipusVia	|Tipus de via.                                                                              |
+|Paràmetres| |Límit|
+|----------|-||
+|codiCarrer	|Codi del Carrer.                                                                           |Number(5)|
+|maxResults	|Número màxim de resultats retornats.                                                       ||
+|municipi	|Identificador de municipi. Inclou codi de país, codi de provincia i codi de municipi.      ||
+|nomCarrer	|Nom del carrer.                                                                            ||
+|tipusVia	|Tipus de via.                                                                              ||
 
 
 
