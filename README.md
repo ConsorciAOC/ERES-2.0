@@ -205,12 +205,13 @@ Cos de la petició
 	}
 }
 ```
-|Paràmetres| | |
-|----------|-| |
+|Paràmetres| |Límit|
+|----------|-|-|
 |carrer.codCarrer	|Codi del Carrer.              |Number(5)|
 |carrer.codMunicipi	|Codi del Municipi.            |Number(3)|
 |carrer.codPais		|Codi del País.                |Number(3)|
 |carrer.codiProvincia|Codi de provincia.           |Number(2)|
+
 
 ***Exemple:***
 ```json
