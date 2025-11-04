@@ -284,12 +284,14 @@ Expected response body:
 ```
 
 |Paràmetres| |Límit|
-|----------|-||
-|codiCarrer	|Codi del Carrer.                                                                           |Number(5)|
-|maxResults	|Número màxim de resultats retornats.                                                       ||
-|municipi	|Identificador de municipi. Inclou codi de país, codi de provincia i codi de municipi.      ||
-|nomCarrer	|Nom del carrer.                                                                            ||
-|tipusVia	|Tipus de via.                                                                              ||
+|----------|-|-|
+|codiCarrer	|Codi del Carrer.                                                                           | Number(5)|
+|maxResults	|Número màxim de resultats retornats.                                                       | |
+|municipi.codMunicipi	|Codi del Municipi.          												  |Number(3)|
+|municipi.codPais		|Codi del País.                |Number(3)|
+|municipi.codiProvincia|Codi de provincia.           |Number(2)|
+|nomCarrer	|Nom del carrer.                                                                            | String(20)|
+|tipusVia	|Tipus de via.                                                                              | String(5)|
 
 
 
@@ -368,14 +370,14 @@ Expected response body:
 }
 ```
 
-|Paràmetres| |
-|----------|-|
-|codi1	           |Codi de la partícula|
-|codi2	           |Codi 2, codi addicional|
-|comptador	       |Valor numèric|
-|descripcio	       |Descripció de la partícula|
-|descripcio2        |Descripció addicional|	
-|qual	|Qualificador|
+|Paràmetres| |Límit|
+|----------|-|-|
+|codi1	           |Codi de la partícula| String(6)|
+|codi2	           |Codi 2, codi addicional|String(5)|
+|comptador	       |Valor numèric|Number(10)|
+|descripcio	       |Descripció de la partícula|String(255)|
+|descripcio2        |Descripció addicional|String(255)|
+|qual	|Qualificador|char(2)|
 
 
 ***Exemple:***
@@ -483,12 +485,12 @@ Expected response body:
 ```
 
 
-|Paràmetres| |
-|----------|-|
-|baixa			|Informació de la baixa del registre.     |
-|codiSigla		|Codi de Sigla.                           |
-|descAbreujada	|Descripció abreujada.                    |
-|descripcio		|Descripció completa.                     |
+|Paràmetres| |Límit|
+|----------|-|-|
+|baixa			|Informació de la baixa del registre.     |Char(1)|
+|codiSigla		|Codi de Sigla.                           |Char(5)|
+|descAbreujada	|Descripció abreujada.                    |String(25)|
+|descripcio		|Descripció completa.                     |String(50)|
 
 ***Exemple:***
 
@@ -656,43 +658,45 @@ Expected response:
 }
 ```
 
-|Paràmetres| |
-|----------|-|
-|ambKm	            |                                                                  |
-|domTip	            |Tipus de domicili: POST, APTC                                                                  |
-|domTLoc	            |Tipus de local                                                                  |
-|apartatCorreus		|Apartat de Correus.                                               |
-|baixa				|Dades de baixa del Domicili.                                      |
-|bis1	            |Si és bis, número 1 bis                                                                  |
-|bis2	            |Si és bis, número 1 bis                                                                  |
-|bloc				|Número de bloc.                                                   |
-|codiCarrer			|Codi del Carrer.                                                  |
-|codiDomicili		|Codi del Domicili.                                                |
-|codiGIS	            |Referència G.I.S                                                                  |
-|codiPostal			|Codi Postal.                                                      |
-|codiPseudovia	    |Codi pseudovia                                                                  |
-|codiTipusdomicili	|Tipus de Domicili.                                                |
-|codiTipusLocal		|Tipus de Local.                                                   |
-|escala	Escala.     |Escala.                                                                  |
-|hm	                |Hectòmetre per vies no numerades                                                                  |
-|km					|Kilòmetre per vies no numerades.                                  |
-|municipi			|Dades del Municipi. Inclou país, província i municipi.            |
-|num1				|Número 1 del Domicili.                                            |
-|num2				|Número 2 del Domicili.                                            |
-|observacions		|Observacions vàries.                                              |
-|pis	Pis.            |Pis                                                                  |
-|pobledesc	        |Nom de la població                                                                 |
-|porta				|Porta.                                                            |
-|portal				|Número de portal.                                                 |
-|refCadastral		|Referència Cadastral de l’immoble.                                |
-|duplicarAcceptat	|Permet inserir el domicili encara que ja existeixi                                                                  |
-|g_G5Municod	        |Funcionalitat no implementada                                                                  |
-|g_G5Paiscod	        |Funcionalitat no implementada                                                                  |
-|g_G5provcod	        |Funcionalitat no implementada                                                                  |
-|maxResults	        |                                                                  |
-|nomesBaixa	        |                                                                  |
-|senseAproximadors	|                                                                  |
-|senseNumero			|Indicador de Domicili sense número.                               |
+|Paràmetres| |Límit|
+|----------|-|-|
+|ambKm	            |                                                                  |Number(4)|
+|domTip	            |Tipus de domicili: POST, APTC                                                                  |Char(4)|
+|domTLoc	            |Tipus de local                                                                  |Char(2)|
+|apartatCorreus		|Apartat de Correus.                                               |Number(6)|
+|baixa				|Dades de baixa del Domicili.                                      |Char(1)|
+|bis1	            |Si és bis, número 1 bis                                                                  |Char(1)|
+|bis2	            |Si és bis, número 1 bis                                                                  |Char(1)|
+|bloc				|Número de bloc.                                                   |Char(2)|
+|codiCarrer			|Codi del Carrer.                                                  |Number(5)|
+|codiDomicili		|Codi del Domicili.                                                |Number(5)|
+|codiGIS	            |Referència G.I.S                                                                  |String(255)|
+|codiPostal			|Codi Postal.                                                      |String(20)|
+|codiPseudovia	    |Codi pseudovia                                                                  |Number(5)|
+|codiTipusdomicili	|Tipus de Domicili.                                                |Char(4)|
+|codiTipusLocal		|Tipus de Local.                                                   |Char(1)|
+|escala	Escala.     |Escala.                                                                  |Char(2)|
+|hm	                |Hectòmetre per vies no numerades                                                                  |Number(2)|
+|km					|Kilòmetre per vies no numerades.                                  |Number(4)|
+|municipi.codMunicipi	|Codi del Municipi.          												  |Number(3)|
+|municipi.codPais		|Codi del País.                |Number(3)|
+|municipi.codiProvincia|Codi de provincia.           |Number(2)|
+|num1				|Número 1 del Domicili.                                            |Char(4)|
+|num2				|Número 2 del Domicili.                                            |Char(4)|
+|observacions		|Observacions vàries.                                              |String(256)|
+|pis	Pis.            |Pis                                                                  |Char(3)|
+|pobledesc	        |Nom de la població                                                                 |String(50)|
+|porta				|Porta.                                                            |Char(4)|
+|portal				|Número de portal.                                                 |Char(2)|
+|refCadastral		|Referència Cadastral de l’immoble.                                |String(255)|
+|duplicarAcceptat	|Permet inserir el domicili encara que ja existeixi                                                                  |boolean|
+|g_G5Municod	        |Funcionalitat no implementada                                                                  ||
+|g_G5Paiscod	        |Funcionalitat no implementada                                                                  ||
+|g_G5provcod	        |Funcionalitat no implementada                                                                  ||
+|maxResults	        |                                                                  ||
+|nomesBaixa	        |                                                                  |boolean|
+|senseAproximadors	|                                                                  |boolean|
+|senseNumero			|Indicador de Domicili sense número.                               |boolean|
 
 
 ***Exemple:***
