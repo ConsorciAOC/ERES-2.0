@@ -124,15 +124,15 @@ A continuació els descrivim en detall.
 }
 ```
 
-|Paràmetres| |
-|----------|-|
-|carrer.baixa			| Dades de baixa del Carrer.                                                         |
-|carrer.codiCarrer		| Codi del Carrer.                                                                   |
-|carrer.codiParticula	| Codi de Partícula del Carrer.                                                      |
-|carrer.codiSigla		| Sigla del Carrer.                                                                  |
-|carrer.municipi		| Municipi del Carrer indicant codi de país, codi de provícia i codi de municipi.    |
-|carrer.nom				| Nom del Carrer.                                                                    |
-|carrer.nomAbreujat		| Nom abreujaT del Carrer.                                                           |
+|Paràmetres| | |
+|----------|-|-|
+|carrer.baixa			| Dades de baixa del Carrer.                                                         | Char(1) |
+|carrer.codiCarrer		| Codi del Carrer.                                                                   | Number(5) |
+|carrer.codiParticula	| Codi de Partícula del Carrer.                                                      | Char(6) |
+|carrer.codiSigla		| Sigla del Carrer.                                                                  | Char(5) |
+|carrer.municipi		| Municipi del Carrer indicant codi de país, codi de provícia i codi de municipi.    | Number(3) |
+|carrer.nom				| Nom del Carrer.                                                                    | String(50) |
+|carrer.nomAbreujat		| Nom abreujaT del Carrer.                                                           | String(25) |
 
 ***Exemple:***
 
