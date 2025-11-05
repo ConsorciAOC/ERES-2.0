@@ -4357,31 +4357,31 @@ Expected response: {
 }
 ```
 
-|Paràmetres| 	||
+|Paràmetres| 	|Límit|
 |----------|----|-|
-|areacodAssumpte	          |Obligatori. Codi àrea de destí	||
-|assumcod	                  |Obligatori. Codi assumpte	||
-|codiTransport	                  |Obligatori. Codi tipus transport 	||
-|contingut	          |Obligatori. Contingut extracte		||
-|depcodAssumpte	                      |Obligatori. Codi de departament destí (unitat de treball) 	||
-|descripcioCurta	              |Descripció observacions transport	||
-|refCodAssumpte	                  |Codi assumpte del quadre de classificació. Si no s'indica, s'agafa assumcod		||
-|numeroTransport	                  |Número relacionat amb el mitjà de transport 		||
-|representant.nom	          |Nom del representant. Obligatori si la persona no existeix i es vol crear. 	||
-|representant.cognom1	                      |Primer cognom del representant. Obligatori si la persona no existeix i es vol crear.	||
-|representant.cognom2	              |Segon cognom del representant. Obligatori si la persona no existeix i es vol crear.		||
-|representant.nif	                  |NIF o DNI del representant. Obligatori si la persona no existeix i es vol crear. Si ja existeix, només indicant el NIF ja es recupera la informació de la persona.	||
-|representant.mail	                  |E-mail de la persona representant ||
-|representant.telefon	          |Telèfon de la persona representant ||
-|representant.crearPersonaSiNoExisteix    |Si no existeix la persona amb el DNI o passaport indicat, la crea. Per defecte false 	||
-|solicitant.nom	                      |Nom de l’interessat principal. Obligatori si la persona no existeix i es vol crear. 	||
-|solicitant.cognom1	               |Primer cognom de l’interessat principal. Obligatori si la persona no existeix i  es vol crear. 	||
-|solicitant.cognom2	              |Segon cognom de l’interessat principal. Obligatori si la persona no existeix i es vol crear.		||
-|solicitant.nif	                  |NIF o DNI de l’interessat principal. Obligatori si la persona no existeix i es vol crear. Si ja existeix, només indicant el NIF ja es recupera la informació de la persona.	||
-|solicitant.mail	                  |E-mail de l’interessat principal 	||
-|solicitant.telefon	          |Telèfon de l’interessat principal 	||
-|solicitant.crearPersonaSiNoExisteix    |Si no existeix la persona amb el DNI o passaport indicat, la crea. Per defecte false 	||
-|transObs	                      |Observacions transport. Xafa el contingut de descripcioCurta 	||
+|areacodAssumpte	          |Obligatori. Codi àrea de destí	|String(8)|
+|assumcod	                  |Obligatori. Codi assumpte	|String(4)|
+|codiTransport	                  |Obligatori. Codi tipus transport 	|String(4)|
+|contingut	          |Obligatori. Contingut extracte		|String(4000)|
+|depcodAssumpte	                      |Obligatori. Codi de departament destí (unitat de treball) 	|String(4)|
+|descripcioCurta	              |Descripció observacions transport	|String(255)|
+|refCodAssumpte	                  |Codi assumpte del quadre de classificació. Si no s'indica, s'agafa assumcod		|String(20)|
+|numeroTransport	                  |Número relacionat amb el mitjà de transport 		|String(255)|
+|representant.nom	          |Nom del representant. Obligatori si la persona no existeix i es vol crear. 	|String(255)|
+|representant.cognom1	                      |Primer cognom del representant. Obligatori si la persona no existeix i es vol crear.	|String(25)|
+|representant.cognom2	              |Segon cognom del representant. Obligatori si la persona no existeix i es vol crear.		|String(25)|
+|representant.nif	                  |NIF o DNI del representant. Obligatori si la persona no existeix i es vol crear. Si ja existeix, només indicant el NIF ja es recupera la informació de la persona.	|String(20)|
+|representant.mail	                  |E-mail de la persona representant |String(255)|
+|representant.telefon	          |Telèfon de la persona representant |String(255)|
+|representant.crearPersonaSiNoExisteix    |Si no existeix la persona amb el DNI o passaport indicat, la crea. Per defecte false 	|boolean|
+|solicitant.nom	                      |Nom de l’interessat principal. Obligatori si la persona no existeix i es vol crear. 	|String(255)|
+|solicitant.cognom1	               |Primer cognom de l’interessat principal. Obligatori si la persona no existeix i  es vol crear. 	|String(25)|
+|solicitant.cognom2	              |Segon cognom de l’interessat principal. Obligatori si la persona no existeix i es vol crear.		|String(25)|
+|solicitant.nif	                  |NIF o DNI de l’interessat principal. Obligatori si la persona no existeix i es vol crear. Si ja existeix, només indicant el NIF ja es recupera la informació de la persona.	|String(20)|
+|solicitant.mail	                  |E-mail de l’interessat principal 	|String(255)|
+|solicitant.telefon	          |Telèfon de l’interessat principal 	|String(255)|
+|solicitant.crearPersonaSiNoExisteix    |Si no existeix la persona amb el DNI o passaport indicat, la crea. Per defecte false 	|boolean|
+|transObs	                      |Observacions transport. Xafa el contingut de descripcioCurta 	|String(255)|
 
 
 ***Exemple:***
@@ -5029,13 +5029,13 @@ Expected response: {
 }
 ```
  
-|Paràmetres| |
-|----------|-|
-|entcod	|Identificador de l’entitat. Si només en tenim una utilitzar el valor 1.              |
-|texpcod	|Identificador de tipus d’Expedient.                                              |
-|perscod	|Codi de Persona.                                                                 |
-|sdenum	|Codi d’Expedient. Permet utilitzar les variables d’un altre Expedient.               |
-|data	|Data de l’Expedient. Per omisió la data actual.                                      |
+|Paràmetres| |Límit|
+|----------|-|-|
+|entcod	|Identificador de l’entitat. Si només en tenim una utilitzar el valor 1.              |String(5)|
+|texpcod	|Identificador de tipus d’Expedient.                                              |String(4)|
+|perscod	|Codi de Persona.                                                                 |Number(8)|
+|sdenum	|Codi d’Expedient. Permet utilitzar les variables d’un altre Expedient.               |String(11)|
+|data	|Data de l’Expedient. Per omisió la data actual.                                      |String(8)|
 
 ***Exemple:***
 
@@ -5122,61 +5122,61 @@ Resposta esperada: {
 }
 ```
 
-|Paràmetres| |
-|----------|-|
-|sdenum		|Codi d’Expedient. Obligatori.                               |
-|percod		|Codi de Persona.                                            |
-|persnd		|Codi de Domicili de la Persona.                             |
-|reprcod		|Codi de Representant.                                       |
-|reprnd		|Codi de Domicili del Representant.                          |
-|areacod		|Cod d’Àrea.                                                 |
-|depcod		|Codi de Departament.                                        |
-|grupcod		|Codi de Grup de Treball.                                    |
-|rol			|Codi de Rol.                                                |
-|entcod		|Codi Entitat. Per omissió: ‘1’                              |
-|texpcod		|Codi del tipus d’expedient                                  |
-|decnumreg	|Número decret vinculat.                                     |
-|extrcod		|Codi Extracte                                               |
-|sdetext		|Text de l’expedient                                         |
-|arxsigtop	|Arxiu: signatura topogràfica                                |
-|identval	|Valor identificador. Camp lliure                            |
-|idiomacod	|Codi d’Idioma.                                              |
-|eventexpr	|Valor intern ja obsolet.                                    |
-|sdenumtexp	|Identificador a nivell de tipus d’expedient                 |
-|sdedomcod	|Domicili vinculat a l’expedient                             |
-|sderel		|Número d’expedient relacionat                               |
-|resracodec	|                                                            |
-|resrorg	    |                                                            |
-|sdedreg		|Data alta expedient                                         |
-|sdehreg		|Hora alta expedient                                         |
-|resrdata	|                                                            |
-|connum2	    |                                                            |
-|treccod		|Tipus de recurs.                                            |
-|assumcod	|Codi d’Assumpte.                                            |
-|subassumcod	|Codi de Subassumpte.                                        |
-|sdenumcont	|                                                            |
-|fcontacn	|Forma de contacte de l’interessat principal                 |
-|numconordre	|Número de forma de contacte de l’interessa principal.       |
-|tipcod	    |                                                            |
-|licitacion	|	Valor obsolet.                                          |
-|descassumpte	|Descripció de l’assumpte                                |
-|descsubassumpte	|Descripció del subassumpte                              |
-|transcod		|Tipus de transport                                      |
-|transcodarea	|Àrea de transport                                       |
-|assumcodorg	    |                                                        |
-|subassumcodorg	|                                                        |
-|plataforma		|Plataforma de notificació.                              |
-|sdenument		|Número d’expedient a nivell d’entitat                   |
-|seccod			|Codi Secció (classificació documental)                  |
-|subseccod		|Codi SubSecció (classificació documental)               |
-|sercod			|Codi Sèrie (classificació documental)                   |
-|subsercod		|Codi SubSerie (classificacio documental)                |
-|tancamentData	|Data tancament                                          |
-|tancamentHora	|Hora tancament                                          |
-|tancamentMotiu	|Motiu tancament.                                        |
-|tancamentObs	|Descripcio motiu tancament                              |
-|texpcod	Tipus 	|Expedient                                               |
-|texpdesc		|Descripció del Tipus Expedient                          |
+|Paràmetres| |Límit|
+|----------|-|-|
+|sdenum		|Codi d’Expedient. Obligatori.                               |String(11)|
+|percod		|Codi de Persona.                                            |Number(8)|
+|persnd		|Codi de Domicili de la Persona.                             |Number(6)|
+|reprcod		|Codi de Representant.                                       |Number(8)|
+|reprnd		|Codi de Domicili del Representant.                          |Number(6)|
+|areacod		|Cod d’Àrea.                                                 |String(8)|
+|depcod		|Codi de Departament.                                        |String(4)|
+|grupcod		|Codi de Grup de Treball.                                    |String(4)|
+|rol			|Codi de Rol.                                                |String(20)|
+|entcod		|Codi Entitat. Per omissió: ‘1’                              |String(5)|
+|texpcod		|Codi del tipus d’expedient                                  |String(2)|
+|decnumreg	|Número decret vinculat.                                     |String(15)|
+|extrcod		|Codi Extracte                                               |String(4)|
+|sdetext		|Text de l’expedient                                         |String(4000)|
+|arxsigtop	|Arxiu: signatura topogràfica                                |String(40)|
+|identval	|Valor identificador. Camp lliure                            |String(255)|
+|idiomacod	|Codi d’Idioma.                                              |char(1)|
+|eventexpr	|Valor intern ja obsolet.                                    |String(999)|
+|sdenumtexp	|Identificador a nivell de tipus d’expedient                 |String(14)|
+|sdedomcod	|Domicili vinculat a l’expedient                             |Number(8)|
+|sderel		|Número d’expedient relacionat                               |String(11)|
+|resracodec	|                                                            |String(10)|
+|resrorg	    |                                                            |String(4)|
+|sdedreg		|Data alta expedient                                         |String(8)|
+|sdehreg		|Hora alta expedient                                         |String(6)|
+|resrdata	|                                                            |String(8)|
+|connum2	    |                                                            |Number(2)|
+|treccod		|Tipus de recurs.                                            |String(4)|
+|assumcod	|Codi d’Assumpte.                                            |String(4)|
+|subassumcod	|Codi de Subassumpte.                                        |String(4)|
+|sdenumcont	|                                                            |String(17)|
+|fcontacn	|Forma de contacte de l’interessat principal                 |Number(4)|
+|numconordre	|Número de forma de contacte de l’interessa principal.       |Number(4)|
+|tipcod	    |                                                            |char(2)|
+|licitacion	|	Valor obsolet.                                          ||
+|descassumpte	|Descripció de l’assumpte                                |String(255)|
+|descsubassumpte	|Descripció del subassumpte                              |String(255)|
+|transcod		|Tipus de transport                                      |String(11)|
+|transcodarea	|Àrea de transport                                       |String(20)|
+|assumcodorg	    |                                                        |String(4)|
+|subassumcodorg	|                                                        |String(4)|
+|plataforma		|Plataforma de notificació.                              |String(4)|
+|sdenument		|Número d’expedient a nivell d’entitat                   |String(40)|
+|seccod			|Codi Secció (classificació documental)                  |char(2)|
+|subseccod		|Codi SubSecció (classificació documental)               |char(2)|
+|sercod			|Codi Sèrie (classificació documental)                   |char(2)|
+|subsercod		|Codi SubSerie (classificacio documental)                |char(2)|
+|tancamentData	|Data tancament                                          |String(8)|
+|tancamentHora	|Hora tancament                                          |String(6)|
+|tancamentMotiu	|Motiu tancament.                                        |String(4)|
+|tancamentObs	|Descripcio motiu tancament                              |String(4000)|
+|texpcod	Tipus 	|Expedient                                               |String(4)|
+|texpdesc		|Descripció del Tipus Expedient                          |String(255)|
 
 
 En el cos de la petició s’indiquen totes les propietats possibles.
@@ -5379,11 +5379,11 @@ Expected response body: {
 }
 ```
 
-|Paràmetres| |
-|----------|-|
-|variable	|Codi de la dada addicional.            |
-|valor		|Valor a guardar.                       |
-|varLabel	|Etiqueta de la dada.                   |
+|Paràmetres| |Límit|
+|----------|-|-|
+|variable	|Codi de la dada addicional.            |String(255)|
+|valor		|Valor a guardar.                       |String(4000)|
+|varLabel	|Etiqueta de la dada.                   |String(255)|
 
 ***Exemple:***
 
@@ -5858,12 +5858,12 @@ Expected response body: {
 }
 
 ```
-|Paràmetres| |
-|----------|-|
-|areacod	|Codi d’àrea.                   |
-|areadesc	|Descripció d’area.             |
-|sdeprioritat|	                            |
-|entcod	     |                              |
+|Paràmetres| |Límit|
+|----------|-|-|
+|areacod	|Codi d’àrea.                   |String(8)|
+|areadesc	|Descripció d’area.             |String(60)|
+|sdeprioritat|	                            |Number(4)|
+|entcod	     |                              |String(5)|
 
 ***Exemple:***
 
@@ -5933,9 +5933,9 @@ Expected response: [
 | ------ | ---- | 
 |GET | /organigrama/arees/{areacod}	| 
 
-|Paràmetres| |
-|----------|-|
-|areacod	|Codi d’àrea.                   |
+|Paràmetres| |Límit|
+|----------|-|-|
+|areacod	|Codi d’àrea.                   |char(5)|
 
 ***Exemple:***
 
@@ -5983,12 +5983,12 @@ Expected response: {
 }
 ```
  
-|Paràmetres| |
-|----------|-|
-|areacod		|Codi d’àrea              |
-|areadesc	|No s’utilitza.           |
-|sdeprioritat|No s’utilitza.           |
-|entcod		|No s’utilitza            |
+|Paràmetres| |Límit|
+|----------|-|-|
+|areacod		|Codi d’àrea              |char(8)|
+|areadesc	|No s’utilitza.           ||
+|sdeprioritat|No s’utilitza.           ||
+|entcod		|No s’utilitza            ||
 
 ***Exemple:***
 
@@ -6038,14 +6038,14 @@ Expected response: {
 }
 ```
 
-|Paràmetres| |
-|----------|-|
-|areacod		|Codi d’àrea.                              |
-|depcod		|Codi de departament.                      |
-|depdesc		|Descripció del departament.               |
-|depdesc2	|Segona descripció del departament.        |
-|sdeprioritat|	                                      |
-|responsable	|	Responsable del departament.          |
+|Paràmetres| |Límit|
+|----------|-|-|
+|areacod		|Codi d’àrea.                              |char(8)|
+|depcod		|Codi de departament.                      |char(4)|
+|depdesc		|Descripció del departament.               |String(60)|
+|depdesc2	|Segona descripció del departament.        |String(40)|
+|sdeprioritat|	                                      |number(4)|
+|responsable	|	Responsable del departament.          |String(255)|
 
 ***Exemple:***
 
@@ -6086,9 +6086,9 @@ Expected response: {
 | ------ | ---- | 
 |GET | /organigrama/arees/{areacod}/departaments	| 
 
-|Paràmetres| |
-|----------|-|
-|areacod		|Codi d’àrea.                              |
+|Paràmetres| |Límit|
+|----------|-|-
+|areacod		|Codi d’àrea.                              |char(8)|
 
 ***Exemple:***
 
@@ -6144,10 +6144,10 @@ Expected response: [
 | ------ | ---- | 
 |GET | /organigrama/arees/{areacod}/departaments/{depcod}	| 
 
-|Paràmetres| |
-|----------|-|
-|areacod		|Codi d’àrea.                              |
-|depcod		|Codi de departament.                      |
+|Paràmetres| |Límit|
+|----------|-|-|
+|areacod		|Codi d’àrea.                              |char(8)|
+|depcod		|Codi de departament.                      |char(4)|
 
 ***Exemple:***
 
@@ -6215,14 +6215,14 @@ Expected response: {
 }
 ```
  
-|Paràmetres| |
-|----------|-|
-|areacod		|Codi d’area.                 |
-|epcod		|Codi de departament.         |
-|epdesc		|No s’utilitza.               |
-|epdesc2	|No s’utilitza.               |
-|deprioritat|	No s’utilitza.            |
-|esponsable	|No s’utilitza.               |
+|Paràmetres| |Límit|
+|----------|-|-|
+|areacod		|Codi d’area.                 |char(8)|
+|epcod		|Codi de departament.         |char(4)|
+|epdesc		|No s’utilitza.               ||
+|epdesc2	|No s’utilitza.               ||
+|deprioritat|	No s’utilitza.            ||
+|esponsable	|No s’utilitza.               ||
 
 ***Exemple:***
 
@@ -6272,12 +6272,12 @@ Expected response: {
 }
 ```
 
-|Paràmetres| |
-|----------|-|                                         
-|areacod	|Codi d’àrea.                              |
-|depcod		|Codi de departament.                      |
-|grupcod	|Codi de grup de treball.                  |
-|grupdesc	|Descripció del grup de treball.           |
+|Paràmetres| |Límit|
+|----------|-|-|                                         
+|areacod	|Codi d’àrea.                              |char(8)|
+|depcod		|Codi de departament.                      |char(4)|
+|grupcod	|Codi de grup de treball.                  |char(4)|
+|grupdesc	|Descripció del grup de treball.           |String(60)|
 
 ***Exemple:***
 
@@ -6464,12 +6464,12 @@ Expected response: {
 }
 ```
 
-|Paràmetres| |
-|----------|-|                                         
-|areacod		|Codi d’area.                    |
-|depcod		|Codi de departament.            |
-|grupcod		|Codi de grup de treball.        |
-|grupdesc	|No s’utilitza.                  |
+|Paràmetres| |Límit|
+|----------|-|-|                                         
+|areacod		|Codi d’area.                    |char(8)|
+|depcod		|Codi de departament.            |char(4)|
+|grupcod		|Codi de grup de treball.        |char(4)|
+|grupdesc	|No s’utilitza.                  ||
 
 ***Exemple:***
 
@@ -6516,12 +6516,12 @@ Expected response: {
     "assumdesc": "string"
 }
 ```
-|Paràmetres| |
-|----------|-|                                         
-|assumcod	|Codi d’assumpte.               |
-|depcod		|Codi de departament.           |
-|areacod	|Codi d’àrea |
-|assumdesc	|Descripció de l’assumpte. |
+|Paràmetres| |Límit|
+|----------|-|-|                                         
+|assumcod	|Codi d’assumpte.               |char(4)|
+|depcod		|Codi de departament.           |char(4)|
+|areacod	|Codi d’àrea |char(8)|
+|assumdesc	|Descripció de l’assumpte. |String(255)|
 
 ***Exemple:***
 
@@ -6642,9 +6642,9 @@ Expected response: [
 | ------ | ---- | 
 |GET | /organigrama/assumptes/{assumcod}	| 
 
-|Paràmetres| |
-|----------|-|                                         
-|assumcod	|Codi d’assumpte.               |
+|Paràmetres| |Límit|
+|----------|-|-|                                         
+|assumcod	|Codi d’assumpte.               |char(4)|
 
 ***Exemple:***
 
@@ -6740,12 +6740,12 @@ Expected response: {
 }
 ```
 
-|Paràmetres| |
-|----------|-|                                         
-|assumcod	|Codi d’assumpte.               |
-|depcod	|No s’utilitza.|
-|areacod	|No s’utilitza.|
-|assumdesc	|No s’utilitza.|
+|Paràmetres| |Límit|
+|----------|-|-|                                         
+|assumcod	|Codi d’assumpte.               |char(4)|
+|depcod	|No s’utilitza.||
+|areacod	|No s’utilitza.||
+|assumdesc	|No s’utilitza.||
 
 
 ***Exemple:***
