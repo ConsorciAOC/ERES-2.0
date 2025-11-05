@@ -3166,67 +3166,67 @@ Expected response: {
 
 |Paràmetres| |Límit|
 |----------|-|-|
-|arxiu	                          |Codi d’arxiu del document||
-|codiAreaAssumpte	              |Codi àrea de destí||
-|codiAreaCreador	                  |Codi àrea de registre||
-|codiAssumpte	                  |Codi assumpte||
-|codiDepartamentAssumpte	          |Codi departament destí||
-|codiDepartamentCreador	          |Codi departament de registre||
-|coientitat	                      |Codi entitat||
-|codiExtracte	                  |Codi extracte del document||
-|codiIdioma	                      |Codi idioma del document||
-|codiOrganismeOrigen	              |Codi organisme origen del document||
-|codiPersona	                      |Codi persona||
-|codiRepresentant	              |Codi representant||
-|codiTerritori	                  |Codi domicili relacionat||
-|codiTipusTransport	              |Codi mitjà de transport del document||
-|comptDomiciliOrganisme	          |Número registre organisme origen||
-|comptDomiciliPersona	           |Número ordre domicili interessat||
-|comptDomiciliRepresentant        |Número ordre domicili representant||
-|contingutExtracte	               |Sinòpsis del document||
-|dataDocument	                   |Data del document||
-|dataPresentacio	                   |Data de presentació del document||
-|dataRegistreOrganisme	           |Data de registre en l’organisme origen||
-|dataTransport	                   |Data de transport||
-|descAreaAssumpte	               |Descripció àrea assumpte||
-|descDepartamentAssumpte	           |Descripció departament assumpte||
-|domNot	                           |Domicili notificació (Interessat o Representant)||
-|efactComptabilitat	               |eFactura Comptabilitat||
-|efactEstat	                       |Estat eFactura||
-|efactNumfactura	                   |Número eFactura||
-|efactObs	                       |Observacions eFactura||
-|efactProveidor	                   |Preveïdor eFactura||
-|fcontactMail	                   |Email contacte factura||
-|fcontactSms	                       |Telèfon contacte factura||
-|numPagines	                       |Número de pàgines del document||
-|numconordreMail	                   |Ordre forma de contacte email||
-|numconordreSms	                   |Ordre forma de contacte sms||
-|numeroEntrada	                   |Codi del registre d’entrada, format EYYYYXXXXXX||
+|arxiu	                          |Codi d’arxiu del document|String(40)|
+|codiAreaAssumpte	              |Codi àrea de destí|String(8)|
+|codiAreaCreador	                  |Codi àrea de registre|String(8)|
+|codiAssumpte	                  |Codi assumpte|String(4)|
+|codiDepartamentAssumpte	          |Codi departament destí|String(4)|
+|codiDepartamentCreador	          |Codi departament de registre|String(4)|
+|coientitat	                      |Codi entitat|String(5)|
+|codiExtracte	                  |Codi extracte del document|String(4)|
+|codiIdioma	                      |Codi idioma del document|char(1)|
+|codiOrganismeOrigen	              |Codi organisme origen del document|char(1)|
+|codiPersona	                      |Codi persona|Number(8)|
+|codiRepresentant	              |Codi representant|Number(8)|
+|codiTerritori	                  |Codi domicili relacionat|Number(8)|
+|codiTipusTransport	              |Codi mitjà de transport del document|String(4)|
+|comptDomiciliOrganisme	          |Número registre organisme origen|Number(6)|
+|comptDomiciliPersona	           |Número ordre domicili interessat|Number(6)|
+|comptDomiciliRepresentant        |Número ordre domicili representant|Number(6)|
+|contingutExtracte	               |Sinòpsis del document|String(40000)|
+|dataDocument	                   |Data del document|String(8)|
+|dataPresentacio	                   |Data de presentació del document|String(8)|
+|dataRegistreOrganisme	           |Data de registre en l’organisme origen|String(8)|
+|dataTransport	                   |Data de transport|String(8)|
+|descAreaAssumpte	               |Descripció àrea assumpte|String(60)|
+|descDepartamentAssumpte	           |Descripció departament assumpte|String(4)|
+|domNot	                           |Domicili notificació (Interessat o Representant)|char(1)|
+|efactComptabilitat	               |eFactura Comptabilitat|String(8)|
+|efactEstat	                       |Estat eFactura|String(12)|
+|efactNumfactura	                   |Número eFactura|String(20)|
+|efactObs	                       |Observacions eFactura|String(1024)|
+|efactProveidor	                   |Preveïdor eFactura|String(30)|
+|fcontactMail	                   |Email contacte factura|Number(2)|
+|fcontactSms	                       |Telèfon contacte factura|Number(2)|
+|numPagines	                       |Número de pàgines del document|Number(6)|
+|numconordreMail	                   |Ordre forma de contacte email|Number(2)|
+|numconordreSms	                   |Ordre forma de contacte sms|Number(2)|
+|numeroEntrada	                   |Codi del registre d’entrada, format EYYYYXXXXXX|String(11)|
 |numeroEntradaEntitat	           |||
-|numeroFormaContacte	             |Forma de contacte  ||
-|numeroRegistreOrganisme	           |Número de registre organisme origen||
-|numeroTransport	                   |Número relacionat amb el mitjà de transport||
-|observacionsDocument	           |Observacions del document||
-|observacionsTransport	           |Observacions del transport||
-|persNifFoto	                       |NIF complet de la persona||
-|persNomFoto	                       |Nom complet de la persona||
-|persNot	                           |Persona a notificar (Interessat o Representant)||
-|perscontacn	                       |Contacte de la persona: correu electrònic, mòbil, telèfon, oficina...||
-|persndMail	                       |Número email||
-|persnmSms	                       |Número sms||
-|persnumconordre	                   |Contacte de la persona: correu electrònic, mòbil, telèfon, oficina...||
-|plataforma	                       |Plataforma de notificació: AOC o null||
+|numeroFormaContacte	             |Forma de contacte  |Number(4)|
+|numeroRegistreOrganisme	           |Número de registre organisme origen|Number(8)|
+|numeroTransport	                   |Número relacionat amb el mitjà de transport|String(255)|
+|observacionsDocument	           |Observacions del document|String(4000)|
+|observacionsTransport	           |Observacions del transport|String(255)|
+|persNifFoto	                       |NIF complet de la persona|String(20)|
+|persNomFoto	                       |Nom complet de la persona|String(70)|
+|persNot	                           |Persona a notificar (Interessat o Representant)|char(1)|
+|perscontacn	                       |Contacte de la persona: correu electrònic, mòbil, telèfon, oficina...|String(255)|
+|persndMail	                       |Número email|Number(6)|
+|persnmSms	                       |Número sms|Number(6)|
+|persnumconordre	                   |Contacte de la persona: correu electrònic, mòbil, telèfon, oficina...|String(255)|
+|plataforma	                       |Plataforma de notificació: AOC o null|String(4)|
 |registreRelacionat	               |Document relacionat amb el registre d’entrada||
-|repcontac	                       |||
-|repfcontac	                       |||
-|resNumExt	                       |||
-|resorgcontac	                   |||
-|resorgfcontac	                   |||
-|responsable	                       |Responsable||
-|tipusOrganisme	                   |||
-|tractat	                           |Entrada tractada||
-|tramcod	                           |Codi del tràmit||
-|tramdesc	                       |Descripció del tràmit||
+|repcontac	                       ||Number(4)|
+|repfcontac	                       ||Number(4)|
+|resNumExt	                       ||String(11)|
+|resorgcontac	                   ||Number(4)|
+|resorgfcontac	                   ||Number(4)|
+|responsable	                       |Responsable|String(255)|
+|tipusOrganisme	                   ||char(1)|
+|tractat	                           |Entrada tractada|Number(1)|
+|tramcod	                           |Codi del tràmit|Number(8)|
+|tramdesc	                       |Descripció del tràmit|String(1024)|
 
 ***Exemple:***
 
@@ -3361,35 +3361,35 @@ Expected response: {
 }
 ```
 
-|Paràmetres| 	|
-|----------|----|
-|areacodAssumpte	          |Obligatori. Codi àrea de destí	|
-|assumcod	                  |Obligatori. Codi assumpte	|
-|codiTransport	                  |Obligatori. Codi tipus transport 	|
-|codiAreaAssumpte	          |Codi àrea de destí			|
-|contingut	          |Obligatori. Contingut extracte		|
-|depcodAssumpte	                      |Obligatori. Codi de departament destí (unitat de treball) 	|
-|descripcioCurta	              |Descripció observacions transport	|
-|refcodassumpte	                  |Codi assumpte del quadre de classificació. Si no s'indica, s'agafa assumcod		|
-|numeroTransport	                  |Número relacionat amb el mitjà de transport 		|
-|responsable	          |Responsable destinatari, valor "_RESPONSABLE_" (visible en alguns entorns)	|
-|representant.nom	          |Nom del representant. Obligatori si la persona no existeix i es vol crear. 	|
-|representant.cognom1	                      |Primer cognom del representant. Obligatori si la persona no existeix i es vol crear.	|
-|representant.cognom2	              |Segon cognom del representant. Obligatori si la persona no existeix i es vol crear.		|
-|representant.nif	                  |NIF o DNI del representant. Obligatori si la persona no existeix i es vol crear. Si ja existeix, només indicant el NIF ja es recupera la informació de la persona.	|
-|representant.mail	                  |E-mail de la persona representant |
-|representant.telefon	          |Telèfon de la persona representant |
-|representant.crearPersonaSiNoExisteix    |Si no existeix la persona amb el DNI o passaport indicat, la crea. Per defecte false 	|
-|solicitant.nom	                      |Nom de l’interessat principal. Obligatori si la persona no existeix i es vol crear. 	|
-|solicitant.cognom1	               |Primer cognom de l’interessat principal. Obligatori si la persona no existeix i  es vol crear. 	|
-|solicitant.cognom2	              |Segon cognom de l’interessat principal. Obligatori si la persona no existeix i es vol crear.		|
-|solicitant.nif	                  |NIF o DNI de l’interessat principal. Obligatori si la persona no existeix i es vol crear. Si ja existeix, només indicant el NIF ja es recupera la informació de la persona.	|
-|solicitant.mail	                  |E-mail de l’interessat principal 	|
-|solicitant.telefon	          |Telèfon de l’interessat principal 	|
-|solicitant.crearPersonaSiNoExisteix    |Si no existeix la persona amb el DNI o passaport indicat, la crea. Per defecte false 	|
-|tramcod	                      |Codi del tràmit 	|
-|transObs	                      |Observacions transport. Xafa el contingut de descripcioCurta 	|
-|wAny	                      |Any del registre 	|
+|Paràmetres| 	|Límit|
+|----------|----|-|
+|areacodAssumpte	          |Obligatori. Codi àrea de destí	|String(8)|
+|assumcod	                  |Obligatori. Codi assumpte	|String(4)|
+|codiTransport	                  |Obligatori. Codi tipus transport 	|String(4)|
+|codiAreaAssumpte	          |Codi àrea de destí			|String(8)|
+|contingut	          |Obligatori. Contingut extracte		|String(4000)|
+|depcodAssumpte	                      |Obligatori. Codi de departament destí (unitat de treball) 	|String(4)|
+|descripcioCurta	              |Descripció observacions transport	|String(255)|
+|refcodassumpte	                  |Codi assumpte del quadre de classificació. Si no s'indica, s'agafa assumcod		||
+|numeroTransport	                  |Número relacionat amb el mitjà de transport 		||
+|responsable	          |Responsable destinatari, valor "_RESPONSABLE_" (visible en alguns entorns)	||
+|representant.nom	          |Nom del representant. Obligatori si la persona no existeix i es vol crear. 	||
+|representant.cognom1	                      |Primer cognom del representant. Obligatori si la persona no existeix i es vol crear.	||
+|representant.cognom2	              |Segon cognom del representant. Obligatori si la persona no existeix i es vol crear.		||
+|representant.nif	                  |NIF o DNI del representant. Obligatori si la persona no existeix i es vol crear. Si ja existeix, només indicant el NIF ja es recupera la informació de la persona.	||
+|representant.mail	                  |E-mail de la persona representant ||
+|representant.telefon	          |Telèfon de la persona representant ||
+|representant.crearPersonaSiNoExisteix    |Si no existeix la persona amb el DNI o passaport indicat, la crea. Per defecte false 	||
+|solicitant.nom	                      |Nom de l’interessat principal. Obligatori si la persona no existeix i es vol crear. 	||
+|solicitant.cognom1	               |Primer cognom de l’interessat principal. Obligatori si la persona no existeix i  es vol crear. 	||
+|solicitant.cognom2	              |Segon cognom de l’interessat principal. Obligatori si la persona no existeix i es vol crear.		||
+|solicitant.nif	                  |NIF o DNI de l’interessat principal. Obligatori si la persona no existeix i es vol crear. Si ja existeix, només indicant el NIF ja es recupera la informació de la persona.	||
+|solicitant.mail	                  |E-mail de l’interessat principal 	||
+|solicitant.telefon	          |Telèfon de l’interessat principal 	||
+|solicitant.crearPersonaSiNoExisteix    |Si no existeix la persona amb el DNI o passaport indicat, la crea. Per defecte false 	||
+|tramcod	                      |Codi del tràmit 	||
+|transObs	                      |Observacions transport. Xafa el contingut de descripcioCurta 	||
+|wAny	                      |Any del registre 	||
 
 ***Exemple:***
 
