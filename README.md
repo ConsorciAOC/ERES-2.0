@@ -1777,10 +1777,10 @@ Expected response: {
     "horaModificacio": "string"
 }
 ```
-|Paràmetres| |
-|----------|-|
-|dataModificacio	|Dia de modificació.|
-|horaModificacio		|Hora de modificació.|
+|Paràmetres| |Límit|
+|----------|-|-|
+|dataModificacio	|Dia de modificació.|char(8)|
+|horaModificacio		|Hora de modificació.|char(6)|
  
 
 ***Exemple:***
@@ -2559,10 +2559,10 @@ Expected response: {
 |directori	                          |Directori on generar el pdf|String(255)|
 |idioma	                              |Català o castellà||
 |numeroRegistr 	                      |Número del registre d’entrada|char(11)|
-|plantilla	                          |Plantilla pel duplicat del pdf||
-|quantitat	                          |Quantitat de registres a duplicar||
-|recalcularDirectoriPlantilles	      |Recalcular el directori de les plantilles degut al sistema operatiu||
-|urlServer	                          |Url servidor per la ruta del download4J||
+|plantilla	                          |Plantilla pel duplicat del pdf|String(255)|
+|quantitat	                          |Quantitat de registres a duplicar|Number(2)|
+|recalcularDirectoriPlantilles	      |Recalcular el directori de les plantilles degut al sistema operatiu|boolean|
+|urlServer	                          |Url servidor per la ruta del download4J|String(255)|
 
 ***Exemple:***
 
@@ -2632,11 +2632,11 @@ Expected response: {
 |data							|Data del registre reservat.                            |char(8)|
 |hora							|Hora del registre reservat.                            |char(6)|
 |idioma							|Codi d’idioma.                                         |char(1)|
-|plantilla	                   |Plantilla pel pdf                                                        ||
-|quantitat						|Número de registres a reservar.                        ||
-|recalcularDirectoriPlantilles	|Recalcular el directori de les plantilles degut al sistema operatiu                                                       ||
+|plantilla	                   |Plantilla pel pdf                                                        |String(255)|
+|quantitat						|Número de registres a reservar.                        |Number(2)|
+|recalcularDirectoriPlantilles	|Recalcular el directori de les plantilles degut al sistema operatiu                                                       |boolean|
 |tipusRegistre					|Tipus de registre E/S (entrada o sortida).             |char(1)|
-|urlServer	                   |Url servidor per la ruta del download4J      ||
+|urlServer	                   |Url servidor per la ruta del download4J      |String(255)|
 
 
 ***Exemple:***
@@ -3858,10 +3858,10 @@ Expected response: {
 }
 ```
 
-|Paràmetres| |
-|----------|-|
-| 	resnume                         |Codi de registre d’entrada|
-| 	sdenum                         |Codi de l’expedient al que el relacionarem|
+|Paràmetres| |Límit|
+|----------|-|-|
+| 	resnume                         |Codi de registre d’entrada|char(11)|
+| 	sdenum                         |Codi de l’expedient al que el relacionarem|char(11)|
 
 ***Exemple:***
 
