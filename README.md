@@ -3370,26 +3370,26 @@ Expected response: {
 |contingut	          |Obligatori. Contingut extracte		|String(4000)|
 |depcodAssumpte	                      |Obligatori. Codi de departament destí (unitat de treball) 	|String(4)|
 |descripcioCurta	              |Descripció observacions transport	|String(255)|
-|refcodassumpte	                  |Codi assumpte del quadre de classificació. Si no s'indica, s'agafa assumcod		||
-|numeroTransport	                  |Número relacionat amb el mitjà de transport 		||
-|responsable	          |Responsable destinatari, valor "_RESPONSABLE_" (visible en alguns entorns)	||
-|representant.nom	          |Nom del representant. Obligatori si la persona no existeix i es vol crear. 	||
-|representant.cognom1	                      |Primer cognom del representant. Obligatori si la persona no existeix i es vol crear.	||
-|representant.cognom2	              |Segon cognom del representant. Obligatori si la persona no existeix i es vol crear.		||
-|representant.nif	                  |NIF o DNI del representant. Obligatori si la persona no existeix i es vol crear. Si ja existeix, només indicant el NIF ja es recupera la informació de la persona.	||
-|representant.mail	                  |E-mail de la persona representant ||
-|representant.telefon	          |Telèfon de la persona representant ||
-|representant.crearPersonaSiNoExisteix    |Si no existeix la persona amb el DNI o passaport indicat, la crea. Per defecte false 	||
-|solicitant.nom	                      |Nom de l’interessat principal. Obligatori si la persona no existeix i es vol crear. 	||
-|solicitant.cognom1	               |Primer cognom de l’interessat principal. Obligatori si la persona no existeix i  es vol crear. 	||
-|solicitant.cognom2	              |Segon cognom de l’interessat principal. Obligatori si la persona no existeix i es vol crear.		||
-|solicitant.nif	                  |NIF o DNI de l’interessat principal. Obligatori si la persona no existeix i es vol crear. Si ja existeix, només indicant el NIF ja es recupera la informació de la persona.	||
-|solicitant.mail	                  |E-mail de l’interessat principal 	||
-|solicitant.telefon	          |Telèfon de l’interessat principal 	||
-|solicitant.crearPersonaSiNoExisteix    |Si no existeix la persona amb el DNI o passaport indicat, la crea. Per defecte false 	||
-|tramcod	                      |Codi del tràmit 	||
-|transObs	                      |Observacions transport. Xafa el contingut de descripcioCurta 	||
-|wAny	                      |Any del registre 	||
+|refcodassumpte	                  |Codi assumpte del quadre de classificació. Si no s'indica, s'agafa assumcod		|String(20)|
+|numeroTransport	                  |Número relacionat amb el mitjà de transport 		|String(255)|
+|responsable	          |Responsable destinatari, valor "_RESPONSABLE_" (visible en alguns entorns)	|String(255)|
+|representant.nom	          |Nom del representant. Obligatori si la persona no existeix i es vol crear. 	|String(255)|
+|representant.cognom1	                      |Primer cognom del representant. Obligatori si la persona no existeix i es vol crear.	|String(25)|
+|representant.cognom2	              |Segon cognom del representant. Obligatori si la persona no existeix i es vol crear.		|String(25)|
+|representant.nif	                  |NIF o DNI del representant. Obligatori si la persona no existeix i es vol crear. Si ja existeix, només indicant el NIF ja es recupera la informació de la persona.	|String(20)|
+|representant.mail	                  |E-mail de la persona representant |String(255)|
+|representant.telefon	          |Telèfon de la persona representant |String(255)|
+|representant.crearPersonaSiNoExisteix    |Si no existeix la persona amb el DNI o passaport indicat, la crea. Per defecte false 	|boolean|
+|solicitant.nom	                      |Nom de l’interessat principal. Obligatori si la persona no existeix i es vol crear. 	|String(255)|
+|solicitant.cognom1	               |Primer cognom de l’interessat principal. Obligatori si la persona no existeix i  es vol crear. 	|String(25)|
+|solicitant.cognom2	              |Segon cognom de l’interessat principal. Obligatori si la persona no existeix i es vol crear.		|String(25)|
+|solicitant.nif	                  |NIF o DNI de l’interessat principal. Obligatori si la persona no existeix i es vol crear. Si ja existeix, només indicant el NIF ja es recupera la informació de la persona.	|char(20)|
+|solicitant.mail	                  |E-mail de l’interessat principal 	|String(255)|
+|solicitant.telefon	          |Telèfon de l’interessat principal 	|String(255)|
+|solicitant.crearPersonaSiNoExisteix    |Si no existeix la persona amb el DNI o passaport indicat, la crea. Per defecte false 	|boolean|
+|tramcod	                      |Codi del tràmit 	||Number(8)
+|transObs	                      |Observacions transport. Xafa el contingut de descripcioCurta 	|String(255)|
+|wAny	                      |Any del registre 	|Number(4)|
 
 ***Exemple:***
 
@@ -4357,31 +4357,31 @@ Expected response: {
 }
 ```
 
-|Paràmetres| 	|
-|----------|----|
-|areacodAssumpte	          |Obligatori. Codi àrea de destí	|
-|assumcod	                  |Obligatori. Codi assumpte	|
-|codiTransport	                  |Obligatori. Codi tipus transport 	|
-|contingut	          |Obligatori. Contingut extracte		|
-|depcodAssumpte	                      |Obligatori. Codi de departament destí (unitat de treball) 	|
-|descripcioCurta	              |Descripció observacions transport	|
-|refCodAssumpte	                  |Codi assumpte del quadre de classificació. Si no s'indica, s'agafa assumcod		|
-|numeroTransport	                  |Número relacionat amb el mitjà de transport 		|
-|representant.nom	          |Nom del representant. Obligatori si la persona no existeix i es vol crear. 	|
-|representant.cognom1	                      |Primer cognom del representant. Obligatori si la persona no existeix i es vol crear.	|
-|representant.cognom2	              |Segon cognom del representant. Obligatori si la persona no existeix i es vol crear.		|
-|representant.nif	                  |NIF o DNI del representant. Obligatori si la persona no existeix i es vol crear. Si ja existeix, només indicant el NIF ja es recupera la informació de la persona.	|
-|representant.mail	                  |E-mail de la persona representant |
-|representant.telefon	          |Telèfon de la persona representant |
-|representant.crearPersonaSiNoExisteix    |Si no existeix la persona amb el DNI o passaport indicat, la crea. Per defecte false 	|
-|solicitant.nom	                      |Nom de l’interessat principal. Obligatori si la persona no existeix i es vol crear. 	|
-|solicitant.cognom1	               |Primer cognom de l’interessat principal. Obligatori si la persona no existeix i  es vol crear. 	|
-|solicitant.cognom2	              |Segon cognom de l’interessat principal. Obligatori si la persona no existeix i es vol crear.		|
-|solicitant.nif	                  |NIF o DNI de l’interessat principal. Obligatori si la persona no existeix i es vol crear. Si ja existeix, només indicant el NIF ja es recupera la informació de la persona.	|
-|solicitant.mail	                  |E-mail de l’interessat principal 	|
-|solicitant.telefon	          |Telèfon de l’interessat principal 	|
-|solicitant.crearPersonaSiNoExisteix    |Si no existeix la persona amb el DNI o passaport indicat, la crea. Per defecte false 	|
-|transObs	                      |Observacions transport. Xafa el contingut de descripcioCurta 	|
+|Paràmetres| 	||
+|----------|----|-|
+|areacodAssumpte	          |Obligatori. Codi àrea de destí	||
+|assumcod	                  |Obligatori. Codi assumpte	||
+|codiTransport	                  |Obligatori. Codi tipus transport 	||
+|contingut	          |Obligatori. Contingut extracte		||
+|depcodAssumpte	                      |Obligatori. Codi de departament destí (unitat de treball) 	||
+|descripcioCurta	              |Descripció observacions transport	||
+|refCodAssumpte	                  |Codi assumpte del quadre de classificació. Si no s'indica, s'agafa assumcod		||
+|numeroTransport	                  |Número relacionat amb el mitjà de transport 		||
+|representant.nom	          |Nom del representant. Obligatori si la persona no existeix i es vol crear. 	||
+|representant.cognom1	                      |Primer cognom del representant. Obligatori si la persona no existeix i es vol crear.	||
+|representant.cognom2	              |Segon cognom del representant. Obligatori si la persona no existeix i es vol crear.		||
+|representant.nif	                  |NIF o DNI del representant. Obligatori si la persona no existeix i es vol crear. Si ja existeix, només indicant el NIF ja es recupera la informació de la persona.	||
+|representant.mail	                  |E-mail de la persona representant ||
+|representant.telefon	          |Telèfon de la persona representant ||
+|representant.crearPersonaSiNoExisteix    |Si no existeix la persona amb el DNI o passaport indicat, la crea. Per defecte false 	||
+|solicitant.nom	                      |Nom de l’interessat principal. Obligatori si la persona no existeix i es vol crear. 	||
+|solicitant.cognom1	               |Primer cognom de l’interessat principal. Obligatori si la persona no existeix i  es vol crear. 	||
+|solicitant.cognom2	              |Segon cognom de l’interessat principal. Obligatori si la persona no existeix i es vol crear.		||
+|solicitant.nif	                  |NIF o DNI de l’interessat principal. Obligatori si la persona no existeix i es vol crear. Si ja existeix, només indicant el NIF ja es recupera la informació de la persona.	||
+|solicitant.mail	                  |E-mail de l’interessat principal 	||
+|solicitant.telefon	          |Telèfon de l’interessat principal 	||
+|solicitant.crearPersonaSiNoExisteix    |Si no existeix la persona amb el DNI o passaport indicat, la crea. Per defecte false 	||
+|transObs	                      |Observacions transport. Xafa el contingut de descripcioCurta 	||
 
 
 ***Exemple:***
