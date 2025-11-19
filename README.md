@@ -41,7 +41,7 @@ Punts d’accés a la API:
 
 | Paràmetre | Descripció |
 | --------- | ---------- |
-| *URL*    | http://xxxx      |
+| *URL*    | [http://xxxx](http://xxxx-rest.e-registre.cat (p.ex: https://ensformacioa-rest.e-registre.cat))      |
 | *Endpoint*    | /JGenesysREST/api        |
 | *Swagger UI*    | /JGenesysREST/api/swagger-ui.html        |
 | *Swagger doc*    | /JGenesysREST/api/v2/api-docs        |
