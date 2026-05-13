@@ -5,6 +5,10 @@ Document d'Integració del servei ERES 2.0
 
 Per millorar la integració de la aplicació Genesys amb altres entorns, s’ha desenvolupat una API amb arquitectura REST.
 
+Recordeu que els entorns de DEV i PRE estan destinats únicament per a l'ús de proves i que d'acord amb el Supervisor Europeo de Protecció de Dades (EDPS) no es poden fer servir dades personals reals. 
+
+Us suggerim que a l'hora de realitzar la vostra integració amb ERES tingueu presents les recomanacions recollides al document La privacitat des del disseny i la privacitat per defecte - Guia per a desenvolupadors de l'APDCAT.
+
 ## 1.1	Objectius
 
 Aquest document té com objectiu proporcionar una guia tècnica completa per la utilització de la API REST de l’aplicació Genesys de Audifilm Consulting.
